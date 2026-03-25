@@ -1,0 +1,266 @@
+/* Opći stilovi */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Header */
+.site-header {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.site-header h1 {
+    margin: 0 0 10px;
+    font-size: 2.3rem;
+}
+
+.site-header p {
+    margin: 0;
+    font-size: 1.05rem;
+}
+
+/* Navigacija */
+.nav-wrapper {
+    background-color: #1c2b36;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.menu-toggle {
+    display: block;
+    background-color: #3498db;
+    color: white;
+    padding: 14px 22px;
+    font-size: 1rem;
+    font-weight: bold;
+    width: 100%;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+.main-nav {
+    display: none;
+}
+
+.nav-wrapper:hover .main-nav,
+.nav-wrapper:focus-within .main-nav {
+    display: block;
+}
+
+.nav-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: #222;
+}
+
+.nav-menu li {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-menu a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.nav-menu a:hover,
+.nav-menu a:focus {
+    background-color: #3498db;
+}
+
+/* Glavni sadržaj */
+.page-content {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 25px 20px 40px;
+}
+
+/* Uvod i članak */
+.intro,
+.news-box {
+    background-color: white;
+    margin-bottom: 25px;
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+.intro h2,
+.news-box h2,
+.table-section h2,
+.movie-aside h2 {
+    margin-top: 0;
+    color: #2c5364;
+}
+
+/* Grid raspored */
+.data-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 25px;
+    align-items: start;
+}
+
+.table-section {
+    min-width: 0;
+    background-color: white;
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+.movie-aside {
+    background-color: white;
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+/* Tablica */
+.table-responsive {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 700px;
+    background-color: white;
+}
+
+caption {
+    caption-side: top;
+    text-align: left;
+    font-weight: bold;
+    margin-bottom: 12px;
+    color: #444;
+}
+
+th,
+td {
+    border: 1px solid #d9d9d9;
+    padding: 12px 10px;
+    text-align: left;
+    font-size: 0.95rem;
+}
+
+th {
+    background-color: #2c5364;
+    color: white;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+    background-color: #fff0f0;
+    transition: background-color 0.2s ease;
+}
+
+/* Aside slika */
+.movie-aside picture {
+    display: block;
+    margin-bottom: 15px;
+}
+
+.movie-aside img {
+    width: 100%;
+    border-radius: 12px;
+    transition: transform 0.35s ease, opacity 0.35s ease, box-shadow 0.35s ease;
+}
+
+.movie-aside img:hover {
+    transform: scale(1.10);
+    opacity: 0.92;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+}
+
+/* Gumb/link */
+.info-button {
+    display: inline-block;
+    margin-top: 15px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    padding: 12px 18px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.info-button:hover,
+.info-button:focus {
+    background-color: #217dbb;
+    transform: translateY(-2px);
+}
+
+/* Footer */
+footer {
+    background-color: #1b1b1b;
+    color: white;
+    text-align: center;
+    padding: 18px;
+    margin-top: 20px;
+}
+
+/* Tablet i manji desktop */
+@media (max-width: 992px) {
+    .data-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .table-section,
+    .movie-aside {
+        width: 100%;
+    }
+}
+
+/* Mobitel */
+@media (max-width: 768px) {
+    .site-header {
+        padding: 30px 15px;
+    }
+
+    .site-header h1 {
+        font-size: 1.8rem;
+    }
+
+    .page-content {
+        padding: 20px 12px 30px;
+    }
+
+    .intro,
+    .news-box,
+    .table-section,
+    .movie-aside {
+        padding: 18px;
+    }
+
+    th,
+    td {
+        font-size: 0.9rem;
+        padding: 10px 8px;
+    }
+
+    .menu-toggle {
+        font-size: 0.95rem;
+        padding: 12px 16px;
+    }
+}

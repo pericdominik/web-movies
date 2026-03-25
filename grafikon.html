@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO meta tag za opis stranice -->
+    <meta name="description" content="Vizualizacija filmskih podataka pomoću CSS-only grafikona bez JavaScripta.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/grafikon.css">
+    <title>Filmovi | Grafikon</title>
+</head>
+<body>
+    <header class="site-header">
+        <h1>Vizualizacija filmskih podataka</h1>
+        <p>Prikaz broja filmova po žanrovima pomoću CSS-only grafikona</p>
+    </header>
+
+    <div class="nav-wrapper">
+        <div class="menu-toggle" aria-hidden="true">Izbornik</div>
+        <nav class="main-nav" aria-label="Glavna navigacija">
+            <ul class="nav-menu">
+                <li><a href="index.html">Početna</a></li>
+                <li><a href="grafikon.html">Grafikon</a></li>
+                <li><a href="slike.html">Galerija</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <main class="page-content">
+        <section class="intro" aria-labelledby="grafikon-uvod">
+            <h2 id="grafikon-uvod">O grafikonu</h2>
+            <p>
+                Ovaj prikaz temelji se na podacima iz tablice filmova na početnoj stranici.
+                Na većim ekranima prikazuje se stupčasti grafikon, dok se na manjim ekranima
+                prikazuje kružni grafikon. Time je ostvarena responzivnost i različit prikaz
+                na različitim rezolucijama bez upotrebe JavaScripta.
+            </p>
+        </section>
+
+        <section class="chart-card" aria-labelledby="chart-title">
+            <h2 id="chart-title">Broj filmova po žanrovima</h2>
+
+            <div class="chart-layout">
+                <!-- DESKTOP BAR CHART -->
+                <div class="bar-chart-wrapper">
+                    <div class="bar-chart" role="img" aria-label="Stupčasti grafikon broja filmova po žanrovima">
+                        <div class="bar-item">
+                            <div class="bar drama" data-value="4"></div>
+                            <span>Drama</span>
+                        </div>
+
+                        <div class="bar-item">
+                            <div class="bar komedija" data-value="4"></div>
+                            <span>Komedija</span>
+                        </div>
+
+                        <div class="bar-item">
+                            <div class="bar akcija" data-value="2"></div>
+                            <span>Akcija</span>
+                        </div>
+
+                        <div class="bar-item">
+                            <div class="bar ostali" data-value="9"></div>
+                            <span>Ostali</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MOBILE PIE CHART -->
+                <div class="pie-chart-wrapper">
+                    <div class="pie-chart" aria-label="Kružni grafikon broja filmova po žanrovima"></div>
+                </div>
+
+                <!-- LEGENDA -->
+                <aside class="chart-legend" aria-labelledby="legend-title">
+                    <h3 id="legend-title">Legenda</h3>
+                    <ul>
+                        <li><span class="legend-color drama-color"></span> Drama — 4 filma</li>
+                        <li><span class="legend-color komedija-color"></span> Komedija — 4 filma</li>
+                        <li><span class="legend-color akcija-color"></span> Akcija — 2 filma</li>
+                        <li><span class="legend-color ostali-color"></span> Ostali — 9 filmova</li>
+                    </ul>
+                </aside>
+            </div>
+        </section>
+
+        <article class="news-box" aria-labelledby="analiza-naslov">
+            <h2 id="analiza-naslov">Kratka analiza</h2>
+            <p>
+                Prema prikazanim podacima, najveći broj filmova pripada skupini "Ostali",
+                dok su drama i komedija jednako zastupljene. Akcija se pojavljuje u manjem
+                broju. Grafikon pokazuje kako se isti podaci mogu prikazati na dva načina,
+                ovisno o veličini ekrana.
+            </p>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2025. Web Programiranje. Sva prava pridržana.</p>
+    </footer>
+</body>
+</html>
