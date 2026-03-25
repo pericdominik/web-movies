@@ -29,6 +29,8 @@ https://github.com/anandrmedia/heroku-free-alternatives
 
 ili koristiti Github: https://www.youtube.com/watch?v=OltY8JIaP-4
 
+Objavljena stranica: https://pericdominik.github.io/web-movies/
+
 ### Korisni linkovi prilikom rješavanja zadatka
 
 #### Cheat sheets
